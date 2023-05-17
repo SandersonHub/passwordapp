@@ -21,8 +21,8 @@ function generatePassword() {
   }
 
   if (!applyLowercase && !applyUppercase && !applyNumbers && !applySpecialChars) {
-    alert("Select one character type.");
-    return "Try again.";
+    alert("Select a character!");
+    return "Nope, Try again.";
   }
 
   var charsSet = "";
