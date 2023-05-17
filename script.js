@@ -1,11 +1,11 @@
-// define variables
+// All variables that may be selected for the password
 var generateBtn = document.querySelector("#generate");
 var lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
 var uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var numberChars = "0123456789";
 var specialChars = "!#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
 
-// function to generate password
+// creates the password and what type characters the user wants within the password
 function generatePassword() {
   // prompt user for password criteria
   var passwordLength = prompt("Enter a password length between 8 and 128)");
@@ -14,14 +14,14 @@ function generatePassword() {
   var applyNumbers = confirm("Do you want numbers?");
   var applySpecialChars = confirm("Do you want special characters?");
 
-  // validate user input
+  // takes in the user input of the selected values
   if (isNaN(passwordLength) || passwordLength < 8 || passwordLength > 128) {
     alert("Pick a number from 8 to 128.");
     return "I need a number higher then that!";
   }
 
   if (!applyLowercase && !applyUppercase && !applyNumbers && !applySpecialChars) {
-    alert("Please select at least one character type.");
+    alert("Select one character type.");
     return "Try again.";
   }
 
@@ -39,14 +39,14 @@ function generatePassword() {
     charsSet += specialChars;
   }
 
-  // generate password
+  // creates the password
   var password = "";
   for (var i = 0; i < passwordLength; i++) {
     var randomIndex = Math.floor(Math.random() * charsSet.length);
     password += charsSet[randomIndex];
   }
 
-  // return password
+  // returns the password
   return password;
 }
 
