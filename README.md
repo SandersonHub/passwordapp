@@ -8,8 +8,7 @@ Simply bring up your preferfed web browser and and download the index.html to vi
 Built with HTML and CSS and JavaScript
 
 ### Installing
-* How/where to download your program
- - Can download the code from the github or check out the dirct link to the website.
+Can download the code from the github or check out the dirct link to the website.
 
 ## Help
  Please reach out to me on Github if you see any issues.
